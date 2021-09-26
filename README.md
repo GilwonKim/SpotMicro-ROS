@@ -1,21 +1,7 @@
 # Spot Micro Quadruped Project
 
-![Spot Micro Walking](assets/spot_micro_walking.gif)
-![RVIZ](assets/rviz_animation.gif)
-![slam](assets/spot_micro_slam.gif)
-
-
-Video of robot: https://www.youtube.com/watch?v=S-uzWG9Z-5E
-
-* [Overview](#Overview)
-* [General Instructions](#general-instructions)
-* [Description of ROS Nodes](#description-of-ros-nodes)
-* [Additional Project Components](#additional-project-components)
-    * [URDF](#urdf-model)
-    * [TF2 Publishing and Odometry](#tf2-publishing-and-odometry)
-    * [SLAM](#slam)
-* [Future Work](#future-work)
-* [External Links](#external-links)
+The project was initially made by mike4192.
+https://github.com/mike4192/spotMicro
 
 ## Overview
 This project is the source code for a Spot Micro quadruped, a 4 legged open source robot. This code implements motion control of a 3d printed spot micro robot, including sit, stand, angle and walk control. Supporting libraries provide additional capabilities, such as mapping through SLAM and a body mounted lidar. The software is implemented on a Raspberry Pi 3B running Ubuntu 16.04 with ROS Kinetic installed.
@@ -26,9 +12,9 @@ The software is composed of C++ and Python nodes in a ROS framework.
 The frame utilized is the Thingverse Spot Micro frame developed by KDY0523. See [the thingverse page](https://www.thingiverse.com/thing:3445283) for additional details for assembly hardware. The files for cls6336hv servos were printed which also fit the hv5523mg servos I used.
 
 Component List:
-* Computer: Raspberry Pi 3B 
+* Computer: Raspberry Pi 3B -> JetsonNano & Melodic ROS
 * Servo control board: PCA9685, controlled via i2c
-* Servos: 12 x PDI-HV5523MG
+* Servos: 12 x PDI-HV5523MG -> CLS6336HV
 * LCD Panel: 16x2 i2c LCD panel (Optional)
 * Battery: 2s 4000 mAh Lipo, direct connection to servo board for servo power
 * UBEC: HKU5 5V/5A ubec, used as 5v voltage regulator to power raspberry pi, lcd panel, pca9685 control board.
